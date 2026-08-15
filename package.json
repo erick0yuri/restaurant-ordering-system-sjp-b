@@ -1,0 +1,37 @@
+{
+  "name": "restaurant_ordering_system",
+  "version": "1.0.0",
+  "description": "projeto da disciplina de desenvolvimento back-end, do curso de engenharia de software - quarto periodo - turma b (sexta-feira)",
+  "keywords": [
+    "back-end",
+    "js",
+    "ts",
+    "API",
+    "restaurant",
+    "ordering",
+    "node"
+  ],
+  "homepage": "https://github.com/erick0yuri/restaurant-ordering-system-sjp-b#readme",
+  "bugs": {
+    "url": "https://github.com/erick0yuri/restaurant-ordering-system-sjp-b/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/erick0yuri/restaurant-ordering-system-sjp-b.git"
+  },
+  "license": "ISC",
+  "author": "Erick Yuri",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
