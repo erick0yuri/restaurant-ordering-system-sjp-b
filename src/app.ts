@@ -1,55 +1,56 @@
 import express from "express";
+import { randomUUID } from "node:crypto";
 
 const app = express();
+app.use(express.json());
+
+//==================
+//initial data
+//==================
+const pizzaCategoryId = randomUUID();
+const drinksCategoryId = randomUUID();
 
 const categories = [
+    
         {
-            "id": 1,
+            "id": pizzaCategoryId,
             "name": "Pizzas",
             "description": "Pizzas salgadas com diversos sabores, ingredientes e tamanhos."
         },
         {
-            "id": 2,
+            "id": drinksCategoryId,
             "name": "Bebidas",
             "description": "Refrigerantes, sucos, águas e outras opções para acompanhar a pizza."
         },
-        {
-            "id": 3,
-            "name": "Sobremesas",
-            "description": "Sobremesas deliciosas para finalizar a refeição com chave de ouro."
-        }
 ]
 
 const products = [
         {
-            "id": 1,
+            "id": pizzaCategoryId,
             "categoryid": 1,
             "name": "Pizza Calabresa",
             "description": "Molho de tomate, queijo muçarela, calabresa fatiada e cebola.",
             "price": 45.90
         },
         {
-            "id": 2,
+            "id": pizzaCategoryId,
             "categoryid": 1,
             "name": "Pizza Margherita",
             "description": "Molho de tomate, queijo muçarela, tomate e manjericão.",
             "price": 42.90
         },
         {
-            "id": 3,
+            "id": drinksCategoryId,
             "categoryid": 2,
             "name": "Coca-Cola 2L",
             "description": "Refrigerante Coca-Cola de 2 litros.",
             "price": 12.90
         },
-        {
-            "id": 4,
-            "categoryid": 3,
-            "name": "Pizza de Chocolate",
-            "description": "Pizza doce com chocolate ao leite e granulado.",
-            "price": 39.90
-        }
 ]
+
+//==================
+//Root
+//==================
 
 app.get("/", (req, res) => {
     res.status(200).json({
@@ -58,12 +59,69 @@ app.get("/", (req, res) => {
     });
 });
 
+//==================
+//Categories
+//==================
+
 app.get("/categories", (req, res) => {
     res.status(200).json(categories);
+    });
+
+app.get("/categories/:id", (req, res) => {
+    const category = categories.find((category) => {
+            return category.id == req.params.id;
+    });
+
+    if (!category) {
+        return res.status(404).json({
+            message: "Categoria não encontrada."
+        });
+    }
+    
+    res.status(200).json(category);
 });
+
+app.post("/categories", (req, res) => {
+    const category = req.body;
+    categories.push(category);
+    res.status(201).json(category);
+});
+
+app.post("/categories", (req,res) =>{
+    const category = {
+        id: randomUUID(),
+        ...req.body,
+    }
+})
+
+
+//==================
+//Products
+//==================
 
 app.get("/products", (req, res) => {
     res.status(200).json(products);
 });
+
+app.get("/products/:id", (req, res) => {
+    const product = products.find((product) => {
+            return product.id == req.params.id;
+    });
+
+    if (!product) {
+        return res.status(404).json({
+            message: "Produto não encontrada."
+        });
+    }
+    
+    res.status(200).json(product);
+});
+
+app.post("/products", (req, res) => {
+    const product = req.body;
+    products.push(product);
+    res.status(201).json(product);
+});
+
 
 export default app;
