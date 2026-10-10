@@ -1,0 +1,5 @@
+$kind: http-request
+name: GET - Search products
+url: http://localhost:3000/products/search/pizza
+method: GET
+order: 1787353296300
