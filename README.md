@@ -81,7 +81,7 @@ src/
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/joaoramos14/restaurant_ordering_system.git
+git clone https://github.com/erick0yuri/restaurant-ordering-system-sjp-b
 cd restaurant_ordering_system
 
 # 2. Instalar as dependências
