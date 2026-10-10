@@ -11,16 +11,16 @@
     "api",
     "node"
   ],
-  "homepage": "https://github.com/joaoramos14/restaurant_ordering_system#readme",
+  "homepage": "https://github.com/erick0yuri/restaurant-ordering-system-sjp-b#readme",
   "bugs": {
-    "url": "https://github.com/joaoramos14/restaurant_ordering_system/issues"
+    "url": "https://github.com/erick0yuri/restaurant-ordering-system-sjp-b/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/joaoramos14/restaurant_ordering_system.git"
+    "url": "git+https://github.com/erick0yuri/restaurant-ordering-system-sjp-b.git"
   },
   "license": "ISC",
-  "author": "João Ramos",
+  "author": "Erick Yuri Maba Silva",
   "type": "module",
   "main": "index.js",
   "scripts": {

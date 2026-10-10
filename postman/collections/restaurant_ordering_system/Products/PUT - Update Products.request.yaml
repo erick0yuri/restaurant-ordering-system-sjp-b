@@ -1,8 +1,0 @@
-$kind: http-request
-name: PUT - Update Products
-url: http://localhost:3000/products/d05f9072-73e1-479e-829f-24db95a7e840
-method: PUT
-body:
-  type: json
-  content: "{\n  \"name\": \"Pizza Margherita Grande\",\n  \"description\": \"Molho de tomate, mussarela e manjericão\",\n  \"price\": 49.9,\n  \"category_id\": \"COLOQUE-AQUI-O-UUID-DA-CATEGORIA\"\n}"
-order: 3321174139523290

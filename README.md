@@ -81,8 +81,8 @@ src/
 
 ```bash
 # 1. Clonar o repositório
-git clone https://github.com/erick0yuri/restaurant-ordering-system-sjp-b
-cd restaurant_ordering_system
+git clone https://github.com/erick0yuri/restaurant-ordering-system-sjp-b.git
+cd restaurant-ordering-system-sjp-b
 
 # 2. Instalar as dependências
 npm install

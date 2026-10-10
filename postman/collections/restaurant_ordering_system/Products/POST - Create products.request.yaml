@@ -1,8 +1,0 @@
-$kind: http-request
-name: POST - Create products
-url: http://localhost:3000/products
-method: POST
-body:
-  type: json
-  content: "{\n  \"name\": \"Pizza Margherita\",\n  \"description\": \"Molho de tomate, mussarela e manjericão\",\n  \"price\": 39.9,\n  \"category_id\": \"COLOQUE-AQUI-O-UUID-DA-CATEGORIA\"\n}"
-order: 1663644207521243
